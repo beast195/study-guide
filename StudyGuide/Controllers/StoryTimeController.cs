@@ -5,6 +5,7 @@ using StudyGuide.Logic.Services;
 using StudyGuide.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -25,7 +26,7 @@ namespace StudyGuide.Controllers
         {
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyBRggXBUa1RywdS6niXLkNaLgTwT3sUfHo",
+                ApiKey = ConfigurationManager.AppSettings["google.api.key"].ToString(),
                 ApplicationName = this.GetType().ToString()
             });
 
