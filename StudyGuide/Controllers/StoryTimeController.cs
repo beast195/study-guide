@@ -42,20 +42,19 @@ namespace StudyGuide.Controllers
                 {
                     searchListRequest.Q = searchTerm; // Replace with your search term.
                     searchListRequest.MaxResults = 3;
-                    if (searchListRequest.VideoDuration != null)
-                    {
+                    
                         // Call the search.list method to retrieve results matching the specified query term.
                         var searchListResponse = await searchListRequest.ExecuteAsync();
                         foreach (var searchResult in searchListResponse.Items)
                         {
                             if (searchResult.Id.Kind == "youtube#video")
                             {
-                                videos.Add(new StoryTimeViewModel() { Link = searchResult.Snippet.Title, LinkTitle = searchResult.Id.VideoId });
+                                videos.Add(new StoryTimeViewModel() { LinkTitle = searchResult.Snippet.Title, Link = $"https://youtube.com/embed/"+searchResult.Id.VideoId });
                             }
 
                             break;
                         }
-                    }
+                    
                 }
             }
 
