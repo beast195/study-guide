@@ -1,0 +1,15 @@
+﻿@model StudyGuide.ViewModels.ChapterViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="chapterstring" >@Model.Content</div>
+<div>@Model.BookName</div>
+<div class="box">
+    <div class="calc">
+        <div id="myTypingText"></div><div class="cursor" style="right: initial; left:0;"></div>
+    </div>
+</div>
+
+@Scripts.Render("~/Script/js/typeit")
+@Styles.Render("~/Content/css/typeit")

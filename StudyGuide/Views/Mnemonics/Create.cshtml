@@ -1,0 +1,35 @@
+﻿@model StudyGuide.ViewModels.MnemonicsViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 style="text-align:center">Mnemonics</h2>
+<center>
+    @using (Html.BeginForm("Create", "Mnemonics", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    { 
+    <input type="text" id="mneme" name="mneme" onkeyup="addAComma()"/>
+    <button type="submit">Lets Go!</button>
+    }
+</center>
+
+<br />
+<br />
+<br />
+
+<center>
+    <p>
+        @Model.MnemeResults
+    </p>
+</center>
+
+<br />
+<br />
+<br />
+<center><a href="/Home" class="btn-primary" role="button">Back</a></center>
+
+<script>
+    function addAComma() {
+        var dc = document.getElementById("mneme");
+        dc.value =  dc.value + ",";
+    }
+</script>

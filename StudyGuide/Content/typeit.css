@@ -1,0 +1,64 @@
+﻿
+.cursor {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: #000;
+  z-index: 1;
+  -webkit-animation: flash 0.5s none infinite alternate;
+  animation: flash 0.5s none infinite alternate;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.box{
+  /* Position relative means the element is positioned relative to its normal position, which would be the very top left corner as it is the first div in the body. */
+  
+  /* When the position is set to relative, using display: block; and margin:auto; will automatically center the box horizontally. */
+ background-image: url("../Images/book.jpg");
+     background-size: cover;
+    height: 689px;
+    width: 80%;
+ 
+}
+
+/* The width of the div is 50% and the height 67%. This means that the width is 50% of the box and the height 67% of the box. */
+.calc{
+  position: absolute;
+    top: 36.5%;
+    left: 24%;
+    width: 37%;
+    height: 60%;
+    border-radius: 10%;
+    padding: 5%;
+}
+
+
+#myTypingText {
+	/*background-color:#000;*/
+  display: inline;
+	color:#a332b0;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height:30px;
+
+}

@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Welcome to Study Guide</h1>
+@using (Html.BeginForm("CreateBook", "Home", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<h1><input type="file" name="book" id="book" /><button type="submit">Upload</button></h1>
+}
+<div class="drain">
+    <a href="/Matrix" title=""><div style="background-image: url(images/wallpaper.jpg);"></div><span><h3>Matrix</h3><p>Reading time awaits for your click. This is the first Option(aka The one)</p></span></a>
+</div>
+<div class="drain">
+    <a href="/Mnemonics/Create" title=""><div style="background-image: url(images/wallpaper.jpg);"></div><span><h3>Mnemonics</h3><p>Mr Cram to the rescue!!! This option is just for that</p></span></a>
+</div>
+<div class="drain">
+    <a href="/StoryTime" title=""><div style="background-image: url(images/wallpaper.jpg);"></div><span><h3>Story Time</h3><p>Its time to kick back and enjoyh the story about the chapter</p></span></a>
+</div>
+<div class="drain">
+    <a href="/Book" title=""><div style="background-image: url(images/wallpaper.jpg);"></div><span><h3>Chapter Manager</h3><p>This option will allow you to choose and organise your chapters</p></span></a>
+</div>
+
